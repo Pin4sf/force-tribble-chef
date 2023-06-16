@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #1e1e1e;
+    color: #abb2bf;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+    color: #abb2bf;
+    animation: title-appear 0.5s ease;
+}
+
+.card {
+    display: none;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #282c34;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
+    animation: card-appear 0.5s ease;
+}
+
+@keyframes card-appear {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+input {
+    font-family: 'Rajdhani', sans-serif;
+    width: 80%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #abb2bf;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color: #282c34;
+    color: #abb2bf;
+    font-size: 20px;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #555;
+    color: #abb2bf;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #fff;
+    opacity: 0.1;
+    pointer-events: none;
+    transform: skewX(-30deg);
+    transition: left 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+
+button:hover {
+    background-color: #3e4452;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:active {
+    background-color: #22272e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Box */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #282c34;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #abb2bf;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    animation: modal-appear 0.5s ease;
+}
+
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #abb2bf;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+.close:hover,
+.close:focus {
+    color: #00e6b8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.button-container button {
+    font-family: 'Rajdhani', sans-serif;
+    width: 180px;
+    height: 60px;
+    font-size: 22px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00ffcc;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    animation: button-glitch 1.5s ;
+}
+
+.button-container button:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+    transform: skewX(-30deg);
+    transition: left 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+
+.button-container button:hover {
+    background-color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.button-container button:hover:before {
+    left: 100%;
+}
+
+.button-container button:active {
+    background-color: #00e6b8;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+@keyframes button-glitch {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-5px) skewX(-30deg);
+    }
+    40% {
+        transform: translateX(5px) skewX(-30deg);
+    }
+    60% {
+        transform: translateX(-5px) skewX(-30deg);
+    }
+    80% {
+        transform: translateX(5px) skewX(-30deg);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+section {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #282c34;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about-section {
+    padding: 2px;
+    background-color: #282c34;
+    border-radius: 10px;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    color: #abb2bf;
+}
+
+.about-section p {
+    color: #abb2bf;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 5px;
+    color: #abb2bf;
+    font-size: 22px;
+    animation: footer-appear 0.5s ease;
+}
+
+@keyframes footer-appear {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+#github-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+#github-icon:hover {
+    background-color: #00ffcc;
+}
+
+a {
+    text-decoration: none;
+    color: #abb2bf;
+}
+
+#about{
+    animation: about-appear 0.5s ease ;
+}
+
+@keyframes about-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
