@@ -18,7 +18,7 @@ git clone https://github.com/Pin4sf/Force-Tribble-Chef.git
 2. Change directory to the project directory:
 
 ```
-cd Force-Tribble-Chef
+cd force-tribble-chef
 ```
 
 3. Open the Jupyter notebook and see the EDA
