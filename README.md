@@ -12,7 +12,7 @@ You'll need Python 3, NumPy, Pandas, and Scikit-learn installed. Once you have t
 1. Clone the repo:
 
 ```
-git clone https://github.com/[your-username]/Force-Tribble-Chef.git
+git clone https://github.com/Pin4sf/Force-Tribble-Chef.git
 ```
 
 2. Change directory to the project directory:
