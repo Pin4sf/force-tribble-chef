@@ -21,13 +21,15 @@ git clone https://github.com/Pin4sf/Force-Tribble-Chef.git
 cd force-tribble-chef
 ```
 
-3. Open the Jupyter notebook and see the EDA
+3. Open the python file and see the EDA
 
 ## **Results**
 
 The analysis showed that there is a strong correlation between the ratings of CodeChef and Codeforces users. This means that you can use a user's rating on one platform to predict their rating on the other platform.
 
 The prediction model was able to predict the ratings of users with an accuracy of 80%. This means that the model was able to correctly predict the rating of a user 80% of the time.
+
+I have created an website based on the results of machine learning model from python file you can check out the website from here[https://pin4sf.github.io/force-tribble-chef/]
 
 #### Screen Shots
 <p float ="left">
@@ -36,4 +38,3 @@ The prediction model was able to predict the ratings of users with an accuracy o
 ### **Future work**
 
 This project could be extended in a number of ways. For example, the dataset could be expanded to include more users. The model could also be improved by using a different machine learning algorithm.
-
